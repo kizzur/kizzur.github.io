@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Acc Liên Quân Tự Động</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+    }
+    header {
+      background: #1e90ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product h3 {
+      margin-top: 0;
+    }
+    .price {
+      color: #e74c3c;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    button {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #219150;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>SHOP ACC LIÊN QUÂN</h1>
+  <p>Bán acc Liên Quân tự động – Nhận acc ngay</p>
+</header>
+
+<div class="container">
+
+  <div class="product">
+    <h3>ACC LIÊN QUÂN RANDOM</h3>
+    <p>Tướng & skin ngẫu nhiên – chơi ngay</p>
+    <p class="price">50.000đ</p>
+    <button onclick="buy('ACC RANDOM 50K')">MUA NGAY</button>
+  </div>
+
+  <div class="product">
+    <h3>ACC LIÊN QUÂN VIP</h3>
+    <p>Nhiều tướng – nhiều skin xịn</p>
+    <p class="price">150.000đ</p>
+    <button onclick="buy('ACC VIP 150K')">MUA NGAY</button>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Shop Acc Liên Quân – Uy tín & nhanh chóng
+</footer>
+
+<script>
+function buy(product) {
+  alert(
+    "Bạn chọn: " + product +
+    "\n\nVui lòng chuyển khoản MoMo:" +
+    "\n📱 SĐT: 0909xxxxxx" +
+    "\n💰 Số tiền: đúng giá sản phẩm" +
+    "\n📝 Nội dung: LQ + SĐT" +
+    "\n\nSau khi chuyển khoản, acc sẽ được gửi thủ công."
+  );
+}
+</script>
+
+</body>
+</html
