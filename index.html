@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Acc Liên Quân Tự Động</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* INTRO */
+    .intro {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      animation: fadeOut 2s ease forwards;
+      animation-delay: 2.5s;
+    }
+
+    .intro h1 {
+      font-size: 32px;
+      letter-spacing: 3px;
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ff, 0 0 30px #00f7ff;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f7ff; }
+      to { text-shadow: 0 0 30px #00f7ff; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 34px;
+      background: linear-gradient(to right, gold, #00f7ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .product {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 15px rgba(0,247,255,0.2);
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .price {
+      font-size: 22px;
+      color: gold;
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #00f7ff, #00c6ff);
+      color: black;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00f7ff;
+    }
+
+    button:hover {
+      box-shadow: 0 0 25px #00f7ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="intro">
+  <h1>KIZZUR SHOP</h1>
+</div>
+
+<header>
+  <h1>SHOP ACC LIÊN QUÂN</h1>
+  <p>Bán acc Liên Quân tự động – nhận acc ngay</p>
+</header>
+
+<div class="container">
+
+  <div class="product">
+    <h3>ACC LIÊN QUÂN RANDOM</h3>
+    <p>Ngẫu nhiên tướng & skin – chơi ngay</p>
+    <p class="price">50.000đ</p>
+    <button onclick="buy('ACC RANDOM 50K')">MUA NGAY</button>
+  </div>
+
+  <div class="product">
+    <h3>ACC LIÊN QUÂN VIP</h3>
+    <p>Nhiều tướng – nhiều skin xịn</p>
+    <p class="price">150.000đ</p>
+    <button onclick="buy('ACC VIP 150K')">MUA NGAY</button>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Kizzur Shop – Uy tín & nhanh chóng
+</footer>
+
+<script>
+function buy(name) {
+  alert(
+    "Bạn chọn: " + name +
+    "\n\nChuyển khoản MoMo:" +
+    "\n📱 0909xxxxxx" +
+    "\n💰 Đúng số tiền" +
+    "\n📝 Nội dung: LQ + SĐT"
+  );
+}
+</script>
+
+</body>
+</html>
