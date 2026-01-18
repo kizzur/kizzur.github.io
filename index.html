@@ -120,7 +120,7 @@ button{
     <input id="cardSeri" placeholder="Seri thẻ">
     <input id="cardCode" placeholder="Mã thẻ">
 
-    <button onclick="submitCard()">GỬI THẺ</button>
+    <button onclick="goNapThe()">Nạp Thẻ Tự Động</button>
   </div>
 </div>
   <script>
@@ -164,6 +164,27 @@ function openPay(content, amount){
 }
 function closePay(){
   document.getElementById("payPopup").style.display = "none";
+}
+  </script>
+  <script>
+function goNapThe(){
+  const value = document.getElementById("cardValue").value;
+
+  if(!value){
+    alert("Vui lòng chọn mệnh giá!");
+    return;
+  }
+
+  // LINK NẠP THẺ CỦA BẠN (THAY LINK NÀY)
+  const napLink = "https://gachthefast.com/doithecao";
+
+  // Nội dung chuyển khoản
+  const content = "NAP_ACC_LQ_" + Math.floor(Math.random()*10000);
+
+  window.open(
+    napLink + "?amount=" + value + "&note=" + content,
+    "_blank"
+  );
 }
   </script>
 
