@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<script>
+function submitCard(){
+  const value = document.getElementById("cardValue").value;
+  const seri  = document.getElementById("cardSeri").value;
+  const code  = document.getElementById("cardCode").value;
+
+  if(!value || !seri || !code){
+    alert("Vui lòng nhập đầy đủ thông tin thẻ!");
+    return;
+  }
+
+  alert(
+    "📩 Thẻ đã được gửi!\n\n" +
+    "💰 Mệnh giá: " + value + "\n" +
+    "⏳ Shop sẽ kiểm tra & xử lý thủ công."
+  );
+
+  // Xóa dữ liệu sau khi gửi
+  document.getElementById("cardSeri").value = "";
+  document.getElementById("cardCode").value = "";
+}
+</script><!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -122,6 +143,7 @@ button{
     </select>
 
     <select id="cardValue">
+     
   <option value="">-- Chọn mệnh giá --</option>
   <option>10.000</option>
   <option>20.000</option>
@@ -133,9 +155,16 @@ button{
   <option>500.000</option>
   <option>1.000.000</option>
     </select>
+    <input id="cardSeri" placeholder="Seri thẻ">
+<input id="cardCode" placeholder="Mã thẻ">
 
+<button onclick="submitCard()">GỬI THẺ</button>
 
-    
+<p style="font-size:13px;opacity:.8;margin-top:8px">
+  ⏳ Thẻ sẽ được xử lý thủ công trong 5–30 phút.<br>
+  📩 Có vấn đề vui lòng liên hệ Facebook CSKH.
+</p>
+  
 
   
   </div>
@@ -172,8 +201,36 @@ function openPay(content, amount){
 function closePay(){
   document.getElementById("payPopup").style.display = "none";
 }
-  </script>
- 
-  
+  <script>
+function submitCard() {
+  const type = document.getElementById("cardType").value;
+  const value = document.getElementById("cardValue").value;
+  const seri = document.getElementById("cardSeri").value;
+  const code = document.getElementById("cardCode").value;
+
+  if (!type || !value || !seri || !code) {
+    alert("Vui lòng nhập đầy đủ thông tin thẻ");
+    return;
+  }
+
+  const message =
+    "🔔 GẠCH THẺ THỦ CÔNG\n\n" +
+    "📌 Loại thẻ: " + type + "\n" +
+    "💰 Mệnh giá: " + value + "\n" +
+    "🔢 Seri: " + seri + "\n" +
+    "🔑 Mã: " + code + "\n\n" +
+    "⏳ Vui lòng xử lý giúp em ạ";
+
+  const fbLink =
+    "https://www.facebook.com/share/1K8JYdY7U2/" +
+    encodeURIComponent(message);
+
+  window.open(fbLink, "_blank");
+
+  // Xóa dữ liệu sau khi gửi
+  document.getElementById("cardSeri").value = "";
+  document.getElementById("cardCode").value = "";
+}
+</script>
 </body>
 </html>
