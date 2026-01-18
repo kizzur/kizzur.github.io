@@ -55,6 +55,23 @@ button{
 }
 .popup img{width:220px;margin:10px 0}
 .close{color:red;cursor:pointer;margin-top:10px}
+  .fb-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:55px;
+  height:55px;
+  background:#1877f2;
+  color:white;
+  font-size:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 0 15px rgba(24,119,242,.7);
+  z-index:9999;
+  }
 </style>
 </head>
 
@@ -151,6 +168,14 @@ function submitCard(){
 <p>📝 Nội dung: <b id="payContent"></b></p>
     <p style="font-size:13px;opacity:.8">
       Sau khi chuyển khoản, vui lòng chụp màn hình & liên hệ shop
+      <p style="margin-top:10px">
+📩 Facebook CSKH:
+<a href="https://www.facebook.com/share/1Q4T4c9tNC/" 
+   target="_blank"
+   style="color:gold;font-weight:bold">
+BẤM VÀO ĐÂY
+</a>
+      </p>
     </p>
     <div class="close" onclick="closePay()">ĐÓNG</div>
   </div>
@@ -187,6 +212,10 @@ function goNapThe(){
   );
 }
   </script>
-
+  <a href="https://www.facebook.com/share/1Q4T4c9tNC/"
+   class="fb-float"
+   target="_blank">
+  💬
+  </a>
 </body>
 </html>
