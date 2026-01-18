@@ -78,8 +78,8 @@ button{
   <div class="popup-content">
     <h3>QUÉT QR ZALOPAY</h3>
     <img src="zalopay.png">
-    <p>💰 Số tiền: <b>50.000đ</b></p>
-    <p>📝 Nội dung: <b>LQ50</b></p>
+<p>💰 Số tiền: <b id="payAmount"></b></p>
+<p>📝 Nội dung: <b id="payContent"></b></p>
     <p style="font-size:13px;opacity:.8">
       Sau khi chuyển khoản, vui lòng chụp màn hình & liên hệ shop
     </p>
@@ -87,14 +87,16 @@ button{
   </div>
 </div>
 
-<script>
-function openPay(){
-  document.getElementById("payPopup").style.display="flex";
+  <script>
+function openPay(content, amount){
+  document.getElementById("payContent").innerText = content;
+  document.getElementById("payAmount").innerText = amount;
+  document.getElementById("payPopup").style.display = "flex";
 }
 function closePay(){
-  document.getElementById("payPopup").style.display="none";
+  document.getElementById("payPopup").style.display = "none";
 }
-</script>
+  </script>
 
 </body>
 </html>
