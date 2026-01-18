@@ -123,6 +123,24 @@ button{
     <button onclick="submitCard()">GỬI THẺ</button>
   </div>
 </div>
+  <script>
+function submitCard(){
+  const value = document.getElementById("cardValue").value;
+  const seri = document.getElementById("cardSeri").value;
+  const code = document.getElementById("cardCode").value;
+
+  if(!value || !seri || !code){
+    alert("Vui lòng nhập đầy đủ thông tin thẻ!");
+    return;
+  }
+
+  alert(
+    "Đã gửi thẻ thành công!\n" +
+    "Mệnh giá: " + value +
+    "\nShop sẽ xử lý trong ít phút."
+  );
+}
+  </script>
 
 <!-- POPUP THANH TOÁN -->
 <div class="popup" id="payPopup">
