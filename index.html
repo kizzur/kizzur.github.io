@@ -87,7 +87,31 @@ button{
     <p class="price">100.000đ</p>
     <button onclick="openPay('LQ100', '100.000đ')">MUA NGAY</button>
   </div>
+  </div> <!-- KẾT THÚC KHU SHOP -->
 
+<!-- ====== GẠCH THẺ CÀO ====== -->
+<div class="container">
+  <div class="product">
+    <h3>GẠCH THẺ CÀO</h3>
+
+    <select id="cardType">
+      <option>Viettel</option>
+      <option>Mobifone</option>
+      <option>Vinaphone</option>
+    </select>
+
+    <select id="cardValue">
+      <option>10.000</option>
+      <option>20.000</option>
+      <option>50.000</option>
+      <option>100.000</option>
+    </select>
+
+    <input id="cardSeri" placeholder="Seri thẻ">
+    <input id="cardCode" placeholder="Mã thẻ">
+
+    <button onclick="submitCard()">GỬI THẺ</button>
+  </div>
 </div>
 
 <!-- POPUP THANH TOÁN -->
