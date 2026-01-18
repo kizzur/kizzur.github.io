@@ -134,30 +134,13 @@ button{
   <option>1.000.000</option>
     </select>
 
-    <input id="cardSeri" placeholder="Seri thẻ">
-    <input id="cardCode" placeholder="Mã thẻ">
 
-    <button onclick="goNapThe()">Nạp Thẻ Tự Động</button>
+    
+
+  
   </div>
 </div>
-  <script>
-function submitCard(){
-  const value = document.getElementById("cardValue").value;
-  const seri = document.getElementById("cardSeri").value;
-  const code = document.getElementById("cardCode").value;
 
-  if(!value || !seri || !code){
-    alert("Vui lòng nhập đầy đủ thông tin thẻ!");
-    return;
-  }
-
-  alert(
-    "Đã gửi thẻ thành công!\n" +
-    "Mệnh giá: " + value +
-    "\nShop sẽ xử lý trong ít phút."
-  );
-}
-  </script>
 
 <!-- POPUP THANH TOÁN -->
 <div class="popup" id="payPopup">
@@ -170,8 +153,7 @@ function submitCard(){
       Sau khi chuyển khoản, vui lòng chụp màn hình & liên hệ shop
       <p style="margin-top:10px">
 📩 Facebook CSKH:
-<a href="https://www.facebook.com/share/1Q4T4c9tNC/" 
-   target="_blank"
+<a href="https://www.facebook.com/share/1Q4T4c9tNC/" lank"
    style="color:gold;font-weight:bold">
 BẤM VÀO ĐÂY
 </a>
@@ -191,31 +173,7 @@ function closePay(){
   document.getElementById("payPopup").style.display = "none";
 }
   </script>
-  <script>
-function goNapThe(){
-  const value = document.getElementById("cardValue").value;
-
-  if(!value){
-    alert("Vui lòng chọn mệnh giá!");
-    return;
-  }
-
-  // LINK NẠP THẺ CỦA BẠN (THAY LINK NÀY)
-  const napLink = "https://gachthefast.com/doithecao";
-
-  // Nội dung chuyển khoản
-  const content = "NAP_ACC_LQ_" + Math.floor(Math.random()*10000);
-
-  window.open(
-    napLink + "?amount=" + value + "&note=" + content,
-    "_blank"
-  );
-}
-  </script>
-  <a href="https://www.facebook.com/share/1Q4T4c9tNC/"
-   class="fb-float"
-   target="_blank">
-  💬
-  </a>
+ 
+  
 </body>
 </html>
